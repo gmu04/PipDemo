@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F755BC552E53CA6F00B4806C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC522E53CA6F00B4806C /* ContentView.swift */; };
+		F755BC562E53CA6F00B4806C /* PipDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC532E53CA6F00B4806C /* PipDemoApp.swift */; };
+		F755BC572E53CA6F00B4806C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F755BC512E53CA6F00B4806C /* Assets.xcassets */; };
+		F755BC5D2E53CACD00B4806C /* pexels-waves.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F755BC5C2E53CACD00B4806C /* pexels-waves.mp4 */; };
+		F755BC5F2E53CAD500B4806C /* LoremIpsum.txt in Resources */ = {isa = PBXBuildFile; fileRef = F755BC5E2E53CAD500B4806C /* LoremIpsum.txt */; };
+		F755BC632E53CBFC00B4806C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC622E53CBFC00B4806C /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F755BC3D2E53C8EF00B4806C /* PipDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F755BC512E53CA6F00B4806C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F755BC522E53CA6F00B4806C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F755BC532E53CA6F00B4806C /* PipDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipDemoApp.swift; sourceTree = "<group>"; };
+		F755BC5C2E53CACD00B4806C /* pexels-waves.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pexels-waves.mp4"; sourceTree = "<group>"; };
+		F755BC5E2E53CAD500B4806C /* LoremIpsum.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LoremIpsum.txt; sourceTree = "<group>"; };
+		F755BC622E53CBFC00B4806C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F755BC3F2E53C8EF00B4806C /* PipDemo */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PipDemo;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F755BC3A2E53C8EF00B4806C /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		F755BC342E53C8EF00B4806C = {
 			isa = PBXGroup;
 			children = (
-				F755BC3F2E53C8EF00B4806C /* PipDemo */,
+				F755BC542E53CA6F00B4806C /* PipDemo */,
 				F755BC3E2E53C8EF00B4806C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,51 @@
 				F755BC3D2E53C8EF00B4806C /* PipDemo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F755BC542E53CA6F00B4806C /* PipDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F755BC582E53CA7800B4806C /* App */,
+				F755BC612E53CAFE00B4806C /* ViewModels */,
+				F755BC602E53CAE100B4806C /* Views */,
+			);
+			path = PipDemo;
+			sourceTree = "<group>";
+		};
+		F755BC582E53CA7800B4806C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F755BC532E53CA6F00B4806C /* PipDemoApp.swift */,
+				F755BC512E53CA6F00B4806C /* Assets.xcassets */,
+				F755BC592E53CA9F00B4806C /* Assets */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		F755BC592E53CA9F00B4806C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F755BC5C2E53CACD00B4806C /* pexels-waves.mp4 */,
+				F755BC5E2E53CAD500B4806C /* LoremIpsum.txt */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F755BC602E53CAE100B4806C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F755BC522E53CA6F00B4806C /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F755BC612E53CAFE00B4806C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F755BC622E53CBFC00B4806C /* ViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +111,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F755BC3F2E53C8EF00B4806C /* PipDemo */,
 			);
 			name = PipDemo;
 			packageProductDependencies = (
@@ -109,6 +158,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F755BC572E53CA6F00B4806C /* Assets.xcassets in Resources */,
+				F755BC5F2E53CAD500B4806C /* LoremIpsum.txt in Resources */,
+				F755BC5D2E53CACD00B4806C /* pexels-waves.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F755BC552E53CA6F00B4806C /* ContentView.swift in Sources */,
+				F755BC632E53CBFC00B4806C /* ViewModel.swift in Sources */,
+				F755BC562E53CA6F00B4806C /* PipDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
