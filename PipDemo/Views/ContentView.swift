@@ -10,11 +10,12 @@ struct ContentView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, world!")
+                    HeaderView()
+                        .font(.headline)
+                        .foregroundStyle(.blue)
+                        .padding(.bottom, 10)
                     
+                    //player is here
                     
                     Divider()
                         .padding(.bottom, 20)
