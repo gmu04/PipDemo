@@ -41,6 +41,7 @@
 		F755BC342E53C8EF00B4806C = {
 			isa = PBXGroup;
 			children = (
+				F755BC642E53CD3A00B4806C /* README.md */,
 				F755BC542E53CA6F00B4806C /* PipDemo */,
 				F755BC3E2E53C8EF00B4806C /* Products */,
 			);
@@ -69,7 +70,6 @@
 			children = (
 				F755BC532E53CA6F00B4806C /* PipDemoApp.swift */,
 				F755BC512E53CA6F00B4806C /* Assets.xcassets */,
-				F755BC642E53CD3A00B4806C /* README.md */,
 				F755BC592E53CA9F00B4806C /* Assets */,
 			);
 			name = App;
