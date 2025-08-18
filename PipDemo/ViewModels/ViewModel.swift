@@ -4,17 +4,30 @@
 import Foundation
 import Combine
 import AVFoundation
+import AVKit
 
 class ViewModel: ObservableObject{
  
+    private(set) var player:AVPlayer?
+    private(set) var pipController: AVPictureInPictureController?
     private(set) var loremIpsum:String = ""
 
     init(){
         setLoremIpsum()
+        createPlayer()
     }
     
     func onViewAppear(){
         configureAudioSession()
+    }
+    
+    private func createPlayer(){
+        guard let path = Bundle.main.path(forResource: "pexels-waves", ofType: "mp4") else {
+            fatalError("Video not found")
+        }
+        let asset = AVURLAsset(url: URL(filePath: path))
+        let playerItem = AVPlayerItem(asset: asset)
+        self.player = AVPlayer(playerItem: playerItem)
     }
     
     private func configureAudioSession() {
