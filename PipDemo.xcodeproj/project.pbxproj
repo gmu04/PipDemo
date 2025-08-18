@@ -13,6 +13,7 @@
 		F755BC5D2E53CACD00B4806C /* pexels-waves.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F755BC5C2E53CACD00B4806C /* pexels-waves.mp4 */; };
 		F755BC5F2E53CAD500B4806C /* LoremIpsum.txt in Resources */ = {isa = PBXBuildFile; fileRef = F755BC5E2E53CAD500B4806C /* LoremIpsum.txt */; };
 		F755BC632E53CBFC00B4806C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC622E53CBFC00B4806C /* ViewModel.swift */; };
+		F755BC652E53CD3A00B4806C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F755BC642E53CD3A00B4806C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		F755BC5C2E53CACD00B4806C /* pexels-waves.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pexels-waves.mp4"; sourceTree = "<group>"; };
 		F755BC5E2E53CAD500B4806C /* LoremIpsum.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LoremIpsum.txt; sourceTree = "<group>"; };
 		F755BC622E53CBFC00B4806C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F755BC642E53CD3A00B4806C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			children = (
 				F755BC532E53CA6F00B4806C /* PipDemoApp.swift */,
 				F755BC512E53CA6F00B4806C /* Assets.xcassets */,
+				F755BC642E53CD3A00B4806C /* README.md */,
 				F755BC592E53CA9F00B4806C /* Assets */,
 			);
 			name = App;
@@ -160,6 +163,7 @@
 			files = (
 				F755BC572E53CA6F00B4806C /* Assets.xcassets in Resources */,
 				F755BC5F2E53CAD500B4806C /* LoremIpsum.txt in Resources */,
+				F755BC652E53CD3A00B4806C /* README.md in Resources */,
 				F755BC5D2E53CACD00B4806C /* pexels-waves.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
