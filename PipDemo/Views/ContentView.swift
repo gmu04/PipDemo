@@ -7,13 +7,24 @@ struct ContentView: View {
     @StateObject var vm = ViewModel()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    Image(systemName: "globe")
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+                    Text("Hello, world!")
+                    
+                    
+                    Divider()
+                        .padding(.bottom, 20)
+                    LoremIpsumView(vm.loremIpsum)
+                        .font(.system(size: 12))
+                }
+            }
+            .padding()
+            .edgesIgnoringSafeArea(.bottom)
         }
-        .padding()
         .onAppear {
             vm.onViewAppear()
         }
