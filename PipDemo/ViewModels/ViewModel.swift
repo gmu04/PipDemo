@@ -7,19 +7,36 @@ import AVFoundation
 import AVKit
 
 class ViewModel: ObservableObject{
- 
+
+    @Published var canStartPiP = false
+    
     private(set) var player:AVPlayer!
     private(set) var pipController: AVPictureInPictureController?
+    private var pipPossibleObservation: NSKeyValueObservation?
     private(set) var loremIpsum:String = ""
 
+    private var publisher:NotificationCenter.Publisher = NotificationCenter.default
+        .publisher(for:AVPlayerItem.didPlayToEndTimeNotification)
+    private var cancellables = Set<AnyCancellable>()
+    
     init(){
         setLoremIpsum()
         createPlayer()
+        configureBindings()
     }
     
     func onViewAppear(){
         configureAudioSession()
         play(seekTo: .zero)
+    }
+    
+    private func configureBindings(){
+        publisher.sink { [weak self] notification in
+            guard let self = self else{ return }
+            print("Video starts again")
+            self.play(seekTo:.zero)
+        }
+        .store(in: &cancellables)
     }
     
     private func setLoremIpsum(){
@@ -64,5 +81,29 @@ extension ViewModel{
         } catch {
             print("Failed to setup audio session: \(error)")
         }
+    }
+    
+    func configurePictureInPicture(_ playerLayer: AVPlayerLayer){
+        // Check if PiP is supported
+        guard AVPictureInPictureController.isPictureInPictureSupported() else {
+            print("Picture-in-Picture is not supported on this device")
+            self.canStartPiP = false
+            return
+        }
+        
+        print("Picture-in-Picture is supported.")
+
+        pipController = AVPictureInPictureController(playerLayer: playerLayer)
+        canStartPiP = pipController?.isPictureInPicturePossible ?? false
+        print("pipController.isPictureInPicturePossible: \(canStartPiP)")
+        
+        self.pipPossibleObservation = pipController?.observe(\AVPictureInPictureController.isPictureInPicturePossible,
+        options: [.initial, .new]) { [weak self] _, change in
+            // Update the PiP button's enabled state.
+            let isItPossible = change.newValue ?? false
+            self?.canStartPiP = isItPossible
+            print("canStartPiP: \(isItPossible)")
+        }
+
     }
 }

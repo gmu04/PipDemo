@@ -17,6 +17,7 @@
 		F755BC692E53D0E900B4806C /* LoremIpsumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC682E53D0E900B4806C /* LoremIpsumView.swift */; };
 		F755BC6B2E53D39D00B4806C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC6A2E53D39D00B4806C /* HeaderView.swift */; };
 		F755BC932E590A0F00B4806C /* GmuVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC922E590A0F00B4806C /* GmuVideoPlayer.swift */; };
+		F755BC952E59166500B4806C /* PipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC942E59166500B4806C /* PipButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,9 @@
 		F755BC682E53D0E900B4806C /* LoremIpsumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremIpsumView.swift; sourceTree = "<group>"; };
 		F755BC6A2E53D39D00B4806C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F755BC922E590A0F00B4806C /* GmuVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmuVideoPlayer.swift; sourceTree = "<group>"; };
+		F755BC942E59166500B4806C /* PipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipButtonView.swift; sourceTree = "<group>"; };
+		F755BC962E5924F000B4806C /* PipDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PipDemo.entitlements; sourceTree = "<group>"; };
+		F755BC972E59250F00B4806C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 		F755BC542E53CA6F00B4806C /* PipDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F755BC972E59250F00B4806C /* Info.plist */,
+				F755BC962E5924F000B4806C /* PipDemo.entitlements */,
 				F755BC582E53CA7800B4806C /* App */,
 				F755BC612E53CAFE00B4806C /* ViewModels */,
 				F755BC602E53CAE100B4806C /* Views */,
@@ -112,6 +118,7 @@
 				F755BC922E590A0F00B4806C /* GmuVideoPlayer.swift */,
 				F755BC6A2E53D39D00B4806C /* HeaderView.swift */,
 				F755BC682E53D0E900B4806C /* LoremIpsumView.swift */,
+				F755BC942E59166500B4806C /* PipButtonView.swift */,
 			);
 			path = ChildViews;
 			sourceTree = "<group>";
@@ -201,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F755BC6B2E53D39D00B4806C /* HeaderView.swift in Sources */,
+				F755BC952E59166500B4806C /* PipButtonView.swift in Sources */,
 				F755BC552E53CA6F00B4806C /* ContentView.swift in Sources */,
 				F755BC932E590A0F00B4806C /* GmuVideoPlayer.swift in Sources */,
 				F755BC632E53CBFC00B4806C /* ViewModel.swift in Sources */,
@@ -338,11 +346,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PipDemo/PipDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 85373584HZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PipDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -366,11 +376,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PipDemo/PipDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 85373584HZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PipDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

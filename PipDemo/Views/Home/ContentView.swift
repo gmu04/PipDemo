@@ -15,15 +15,16 @@ struct ContentView: View {
                         .font(.headline)
                         .foregroundStyle(.blue)
                     
+                    
                     //player
                     GmuVideoPlayer(player: vm.player) { avPlayerLayer in
-                        
+                        print("Configure Picture-in-Picture")
+                        vm.configurePictureInPicture(avPlayerLayer)
                     }
-                    .frame(width: .infinity, height: 320, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width-20, height: 320)
                     
-                    PipButtonView(vm)
+                    PipButtonView(vm: vm)
                         
-                    
                     Divider()
                     
                     LoremIpsumView(vm.loremIpsum)
@@ -43,28 +44,3 @@ struct ContentView: View {
     ContentView()
 }
 
-struct PipButtonView: View {
-    let vm: ViewModel
-
-    @State private var isSelected:Bool = false
-
-    private let startImage = AVPictureInPictureController.pictureInPictureButtonStartImage
-    private let stopImage = AVPictureInPictureController.pictureInPictureButtonStopImage
-          
-    
-    init(_ vm:ViewModel){
-        self.vm = vm
-    }
-    var body: some View {
-        Button {
-            isSelected.toggle()
-        } label: {
-            Image(uiImage:(isSelected ? stopImage : startImage)
-                .withRenderingMode(.alwaysTemplate))
-                .resizable()
-                .frame(width: 50, height: 50)
-                .foregroundStyle(. blue)
-        }
-
-    }
-}
