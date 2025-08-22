@@ -16,6 +16,7 @@
 		F755BC652E53CD3A00B4806C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F755BC642E53CD3A00B4806C /* README.md */; };
 		F755BC692E53D0E900B4806C /* LoremIpsumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC682E53D0E900B4806C /* LoremIpsumView.swift */; };
 		F755BC6B2E53D39D00B4806C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC6A2E53D39D00B4806C /* HeaderView.swift */; };
+		F755BC932E590A0F00B4806C /* GmuVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC922E590A0F00B4806C /* GmuVideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F755BC642E53CD3A00B4806C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F755BC682E53D0E900B4806C /* LoremIpsumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremIpsumView.swift; sourceTree = "<group>"; };
 		F755BC6A2E53D39D00B4806C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F755BC922E590A0F00B4806C /* GmuVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmuVideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +109,9 @@
 		F755BC6C2E53D49B00B4806C /* ChildViews */ = {
 			isa = PBXGroup;
 			children = (
-				F755BC682E53D0E900B4806C /* LoremIpsumView.swift */,
+				F755BC922E590A0F00B4806C /* GmuVideoPlayer.swift */,
 				F755BC6A2E53D39D00B4806C /* HeaderView.swift */,
+				F755BC682E53D0E900B4806C /* LoremIpsumView.swift */,
 			);
 			path = ChildViews;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				F755BC6B2E53D39D00B4806C /* HeaderView.swift in Sources */,
 				F755BC552E53CA6F00B4806C /* ContentView.swift in Sources */,
+				F755BC932E590A0F00B4806C /* GmuVideoPlayer.swift in Sources */,
 				F755BC632E53CBFC00B4806C /* ViewModel.swift in Sources */,
 				F755BC562E53CA6F00B4806C /* PipDemoApp.swift in Sources */,
 				F755BC692E53D0E900B4806C /* LoremIpsumView.swift in Sources */,

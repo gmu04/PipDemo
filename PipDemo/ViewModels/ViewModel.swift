@@ -8,7 +8,7 @@ import AVKit
 
 class ViewModel: ObservableObject{
  
-    private(set) var player:AVPlayer?
+    private(set) var player:AVPlayer!
     private(set) var pipController: AVPictureInPictureController?
     private(set) var loremIpsum:String = ""
 
@@ -19,28 +19,9 @@ class ViewModel: ObservableObject{
     
     func onViewAppear(){
         configureAudioSession()
+        play(seekTo: .zero)
     }
     
-    private func createPlayer(){
-        guard let path = Bundle.main.path(forResource: "pexels-waves", ofType: "mp4") else {
-            fatalError("Video not found")
-        }
-        let asset = AVURLAsset(url: URL(filePath: path))
-        let playerItem = AVPlayerItem(asset: asset)
-        self.player = AVPlayer(playerItem: playerItem)
-    }
-    
-    private func configureAudioSession() {
-        do {
-            let audioSession = AVAudioSession.sharedInstance()
-            // Configure the app for playback of long-form movies.
-            try audioSession.setCategory(.playback, mode: .moviePlayback)
-            try audioSession.setActive(true)
-        } catch {
-            print("Failed to setup audio session: \(error)")
-        }
-    }
-
     private func setLoremIpsum(){
         guard let pathLoremIpsum = Bundle.main.path(forResource: "LoremIpsum", ofType: "txt") else {
             fatalError("Lorem Ipsum file not found")
@@ -55,4 +36,33 @@ class ViewModel: ObservableObject{
         }
     }
 
+}
+
+extension ViewModel{
+    fileprivate func play(seekTo time:CMTime? = nil){
+        if let time = time{
+            player.seek(to: time)
+        }
+        player.play()
+    }
+    
+    fileprivate func createPlayer(){
+        guard let path = Bundle.main.path(forResource: "pexels-waves", ofType: "mp4") else {
+            fatalError("Video not found")
+        }
+        let asset = AVURLAsset(url: URL(filePath: path))
+        let playerItem = AVPlayerItem(asset: asset)
+        self.player = AVPlayer(playerItem: playerItem)
+    }
+    
+    fileprivate func configureAudioSession() {
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            // Configure the app for playback of long-form movies.
+            try audioSession.setCategory(.playback, mode: .moviePlayback)
+            try audioSession.setActive(true)
+        } catch {
+            print("Failed to setup audio session: \(error)")
+        }
+    }
 }

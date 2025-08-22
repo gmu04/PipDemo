@@ -9,16 +9,21 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack {
+                VStack(spacing: 20) {
                     HeaderView()
                         .font(.headline)
                         .foregroundStyle(.blue)
-                        .padding(.bottom, 10)
                     
-                    //player is here
+                    //player
+                    GmuVideoPlayer(player: vm.player) { avPlayerLayer in
+                        
+                    }
+                    .frame(width: .infinity, height: 320, alignment: .center)
+                    
+                    
                     
                     Divider()
-                        .padding(.bottom, 20)
+                    
                     LoremIpsumView(vm.loremIpsum)
                         .font(.system(size: 12))
                 }
