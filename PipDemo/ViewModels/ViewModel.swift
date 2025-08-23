@@ -6,20 +6,21 @@ import Combine
 import AVFoundation
 import AVKit
 
-class ViewModel: ObservableObject{
+final class ViewModel: NSObject, ObservableObject{
 
     @Published var canStartPiP = false
     
     private(set) var player:AVPlayer!
-    private(set) var pipController: AVPictureInPictureController?
-    private var pipPossibleObservation: NSKeyValueObservation?
+    fileprivate var pipController: AVPictureInPictureController?
+    fileprivate var pipPossibleObservation: NSKeyValueObservation?
     private(set) var loremIpsum:String = ""
 
     private var publisher:NotificationCenter.Publisher = NotificationCenter.default
         .publisher(for:AVPlayerItem.didPlayToEndTimeNotification)
     private var cancellables = Set<AnyCancellable>()
     
-    init(){
+    override init(){
+        super.init()
         setLoremIpsum()
         createPlayer()
         configureBindings()
@@ -83,6 +84,15 @@ extension ViewModel{
         }
     }
     
+    func startOrStopPiP(){
+        guard let pipController = pipController else{ return }
+        if pipController.isPictureInPictureActive {
+            pipController.stopPictureInPicture()
+        }else{
+            pipController.startPictureInPicture()
+        }
+    }
+    
     func configurePictureInPicture(_ playerLayer: AVPlayerLayer){
         // Check if PiP is supported
         guard AVPictureInPictureController.isPictureInPictureSupported() else {
@@ -94,6 +104,7 @@ extension ViewModel{
         print("Picture-in-Picture is supported.")
 
         pipController = AVPictureInPictureController(playerLayer: playerLayer)
+        pipController?.delegate = self
         canStartPiP = pipController?.isPictureInPicturePossible ?? false
         print("pipController.isPictureInPicturePossible: \(canStartPiP)")
         
@@ -104,6 +115,11 @@ extension ViewModel{
             self?.canStartPiP = isItPossible
             print("canStartPiP: \(isItPossible)")
         }
-
     }
+}
+
+
+extension ViewModel: AVPictureInPictureControllerDelegate{
+        
+    
 }

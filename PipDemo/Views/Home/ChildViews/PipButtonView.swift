@@ -20,7 +20,7 @@ struct PipButtonView: View {
         Button {
             
             isSelected.toggle()
-            vm.pipController?.startPictureInPicture()
+            vm.startOrStopPiP()
             
         } label: {
             Image(uiImage:(isSelected ? stopImage : startImage)
