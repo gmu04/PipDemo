@@ -119,7 +119,4 @@ extension ViewModel{
 }
 
 
-extension ViewModel: AVPictureInPictureControllerDelegate{
-        
-    
-}
+

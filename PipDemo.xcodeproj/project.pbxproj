@@ -18,6 +18,7 @@
 		F755BC6B2E53D39D00B4806C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC6A2E53D39D00B4806C /* HeaderView.swift */; };
 		F755BC932E590A0F00B4806C /* GmuVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC922E590A0F00B4806C /* GmuVideoPlayer.swift */; };
 		F755BC952E59166500B4806C /* PipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC942E59166500B4806C /* PipButtonView.swift */; };
+		F755BC992E59F1C200B4806C /* ViewModel + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755BC982E59F1C200B4806C /* ViewModel + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		F755BC942E59166500B4806C /* PipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipButtonView.swift; sourceTree = "<group>"; };
 		F755BC962E5924F000B4806C /* PipDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PipDemo.entitlements; sourceTree = "<group>"; };
 		F755BC972E59250F00B4806C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F755BC982E59F1C200B4806C /* ViewModel + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				F755BC622E53CBFC00B4806C /* ViewModel.swift */,
+				F755BC982E59F1C200B4806C /* ViewModel + ext.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F755BC992E59F1C200B4806C /* ViewModel + ext.swift in Sources */,
 				F755BC6B2E53D39D00B4806C /* HeaderView.swift in Sources */,
 				F755BC952E59166500B4806C /* PipButtonView.swift in Sources */,
 				F755BC552E53CA6F00B4806C /* ContentView.swift in Sources */,
